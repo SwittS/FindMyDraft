@@ -1,5 +1,7 @@
-<h2>Sign up</h2>
+<%= render 'global/navbar' %>
 
+<div class="row">
+<div class="col s12 m6 offset-m3">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
