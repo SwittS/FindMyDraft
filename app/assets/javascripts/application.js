@@ -12,13 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.turbolinks
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
 //= require turbolinks
 //= require_tree .
-$( document ).ready(function() {
-
-  $(".button-collapse").sideNav();
-
+$(document).on('ready page:change', function() {
+  Waves.displayEffect(); // Initialize buttons wave effects
+ $(".button-collapse").sideNav(); // Initialize collapse button
 });
