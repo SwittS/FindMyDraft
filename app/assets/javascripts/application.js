@@ -11,13 +11,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
 //= require turbolinks
 //= require_tree .
-$(document).on('ready page:change', function() {
-  Waves.displayEffect(); // Initialize buttons wave effects
- $(".button-collapse").sideNav(); // Initialize collapse button
+$(document).on('turbolinks:load', function() {
+   console.log('(document).turbolinks:load');
+   $(".button-collapse").sideNav();
+   Waves.displayEffect();
 });
