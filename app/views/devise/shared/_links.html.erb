@@ -1,5 +1,7 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_session_path(resource_name) %><br />
+  <div style="text-align: center">
+  Already have an account?<div class="divider"></div><%= link_to "Log in", new_session_path(resource_name), :class=>'waves-effect waves-blue waves-ripple btn' %><br />
+</div>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
