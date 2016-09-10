@@ -1,14 +1,14 @@
 <%= render 'global/navbar' %>
 
-<div class="createAccount row">
-<form class="col s12 m6 offset-m3">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+<div class="createAccount row">
+  <div class="col s12 m6 offset-m3">
   <div class="input-field">
     <i class="material-icons prefix">account_circle</i>
     <label for="icon_prefix">Full Name</label>
-    <%= f.text_field :fullname %>
+    <%= f.text_field :fullname, autofocus: true %>
   </div>
 
   <div class="input-field">
@@ -29,16 +29,22 @@
     <%= f.text_field :phone_number %>
   </div>
 
+  <div class="input-field">
+    <i class="material-icons prefix">perm_identity</i>
+    <label for="icon_prefix">Profile Picture</label>
+    <%= f.text_field :file %>
+  </div>
+
   <div class="privacy">
     <p>By signing up, I agree to Find My Draft’s <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, and <a href="#">Venue Guarantee Terms</a>.</p>
     <br>
   </div>
 
-  <div class="actions center-align">
+  <div class="actions">
     <%= f.submit "Create Account", :class=>'waves-effect waves-blue waves-ripple btn createBtn' %>
   </div>
-<% end %>
-</form>
+  <% end %>
+  </div>
 </div>
 
 <%= render "devise/shared/links" %>
