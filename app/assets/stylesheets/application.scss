@@ -65,9 +65,9 @@
 }
 
 .divider{
-    width:30px;
-    height:auto;
-    display:inline-block;
+  width:30px;
+  height:auto;
+  display:inline-block;
 }
 
 .logInBtn {
@@ -75,6 +75,16 @@
   height: auto;
 }
 
-  nav ul a {
-    font-size: 1.5rem;
-  }
+nav ul a {
+  font-size: 1.5rem;
+}
+
+.single-article .article-container-inner {
+  padding: auto;
+  margin: auto;
+}
+.single-article hr {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 50%;
+}
