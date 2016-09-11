@@ -10,6 +10,8 @@
       <% else %>
       <ul id="dropdown1" class="dropdown-content">
         <li class="divider"></li>
+        <li><%= link_to "View My Profile", user_path(current_user.id)%>
+        </li>
         <li><%= link_to "Edit Profile",  edit_user_registration_path %></li>
         <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
       </ul>
@@ -20,6 +22,7 @@
         </ul>
       </div>
       <% end %>
+
       <ul class="side-nav" id="mobile-demo">
         <% if(!user_signed_in?) %>
         <li><%= link_to "Log In", new_user_session_path %></li>
