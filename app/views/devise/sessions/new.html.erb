@@ -5,9 +5,9 @@
 <div class="createAccount row">
   <div class="col s12 m6 offset-m3">
     <div class="input-field">
-      <i class="material-icons prefix">lock_open</i>
-      <label for="icon_prefix">Password</label>
-      <%= f.password_field :password, autocomplete: "off" %>
+      <i class="material-icons prefix">email</i>
+      <label for="icon_prefix">Email Address</label>
+      <%= f.email_field :email, autofocus: true %>
     </div>
 
     <div class="input-field">
