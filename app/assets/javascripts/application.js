@@ -20,5 +20,6 @@ $(document).on('turbolinks:load', function() {
    console.log('(document).turbolinks:load');
    $(".button-collapse").sideNav();
    $(".dropdown-button").dropdown();
+   $('select').material_select();
    Waves.displayEffect();
 });

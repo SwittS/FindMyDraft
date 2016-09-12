@@ -1,0 +1,45 @@
+<%= render 'global/navbar' %>
+
+<%= form_for @venue do |f| %>
+
+  <div class="createAccount row">
+  <form action="#">
+  <div class="col s12 m6 offset-m3">
+    <div class="input-field">
+      <i class="material-icons prefix">account_circle</i>
+      <label for="icon_prefix">Venue Name</label>
+      <%= f.text_field :venue_name, autofocus: true%>
+    </div>
+
+    <div class="input-field">
+      <i class="material-icons prefix">email</i>
+      <label for="icon_prefix">Address</label>
+      <%= f.text_field :address%>
+    </div>
+
+
+      <div class="input-field">
+        <i class="material-icons prefix">supervisor_account</i>
+        <label for="icon_prefix"></label>
+      <%= f.select :accomodate, options_for_select([["6", 6], ["8", 8], ["10", 10], ["12", 12], ["14", 14]])%>
+      </div>
+
+
+    <div class="input-field  class="center-align"">
+      <i class="material-icons prefix">perm_scan_wifi</i>
+      <input type="checkbox" id="wifi_check">
+      <label for="wifi_check">WiFi</label>
+      <%= f.check_box :wifi%>
+    </div>
+
+    <div class="input-field">
+      <i class="material-icons prefix">perm_identity</i>
+      <label for="icon_prefix">Draft Venue Photos</label>
+      <%= f.text_field :file%>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Save", :class=>'waves-effect waves-blue waves-ripple btn blue-grey darken-2' %>
+    </div>
+  </form>
+<% end %>
