@@ -22,4 +22,5 @@ $(document).on('turbolinks:load', function() {
    $(".dropdown-button").dropdown();
    $('select').material_select();
    Waves.displayEffect();
+   Materialize.updateTextFields();
 });
