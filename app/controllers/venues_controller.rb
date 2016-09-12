@@ -12,7 +12,7 @@ class VenuesController < ApplicationController
   end
 
   def show
-    @venue = current_user.venue
+    @venue = current_user.venues
   end
 
   def create
