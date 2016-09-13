@@ -1,0 +1,12 @@
+<%= form_for([@venue, @venue.bookings.new]) do |f| %>
+
+<div class="input-field">
+  <i class="material-icons prefix">today</i>
+  <label for="icon_prefix">Pick a draft date</label>
+  <%= f.text_field :draft_date, class: 'datepicker', readonly: 'true'%>
+</div>
+<%= f.hidden_field :venue, value: @venue.id %>
+<div class="actions center-align">
+  <%= f.submit "Book Now", :class=>'waves-effect waves-blue waves-ripple btn blue-grey darken-2' %>
+  <% end %>
+</div>

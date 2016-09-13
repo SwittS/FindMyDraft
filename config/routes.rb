@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   resources :venues
 
   resources :venues do
-    resources :bookings, only: :create
+    resources :bookings, only: [:create]
   end
 
+  get '/calendar' => 'bookings#calendar'
 end
