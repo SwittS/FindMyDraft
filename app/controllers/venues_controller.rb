@@ -12,13 +12,13 @@ class VenuesController < ApplicationController
   end
 
   def show
-    @venue = current_user.venues
+    @venues = current_user.venues
   end
 
   def create
     @venue = current_user.venues.new(venue_params)
     if @venue.save
-      redirect_to edit_venue_path (@venue), notice: "Venue Saved!"
+      redirect_to edit_venue_path(@venue), notice: "Venue Saved!"
     else
       render :new
     end

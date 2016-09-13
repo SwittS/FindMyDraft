@@ -9,14 +9,14 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = current_user.booking.create(booking_params)
-    redirect_to @booking.venue, notice: "Your reservation has been submitted!"
+    @booking = current_user.bookings.create(booking_params)
+    redirect_to user_path(current_user.id), notice: "Your reservation has been submitted!"
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:draft_date)
+    params.require(:booking).permit(:draft_date, :venue_id, :user_id)
   end
-  
+
 end

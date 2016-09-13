@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/datepicker
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
 //= require turbolinks
@@ -23,4 +24,10 @@ $(document).on('turbolinks:load', function() {
    $('select').material_select();
    Waves.displayEffect();
    Materialize.updateTextFields();
+   $('.datepicker').pickadate({
+     selectMonths: true,
+     selectYears: 3,
+     min: true,
+     format: 'yyyy-mm-dd'
+   });
 });
