@@ -9,7 +9,7 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
         <% else %>
-        <li><%= link_to "View Profile", user_path(current_user.id)%>
+        <li><%= link_to  current_user.fullname , user_path(current_user.id) %></li>
         <li><%= link_to "Edit Profile",  edit_user_registration_path %></li>
         <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
         <li><a href="#">About</a></li>
