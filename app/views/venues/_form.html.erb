@@ -30,13 +30,14 @@
           <%= f.label 'WiFi', for:'wifi', id:'wifi' %>
         </div>
       </form>
-
+<br>
     <div class="center-align">
       <label for=":file"><h6>Upload your venue's picture:</h6></label>
       <%= f.uploadcare_field :file, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "1000x1000", :clearable => true } %>
     </div>
-
-
+<br>
+<hr>
+<br>
     <div class="actions">
       <%= f.submit "Save", :class=>'waves-effect waves-blue waves-ripple btn blue-grey darken-2' %>
     </div>
