@@ -20,7 +20,7 @@ class VenuesController < ApplicationController
   def create
     @venue = current_user.venues.new(venue_params)
     if @venue.save
-      redirect_to edit_venue_path(@venue), notice: "Venue Saved!"
+      redirect_to venues_path, notice: "Venue Saved!"
     else
       render :new
     end
