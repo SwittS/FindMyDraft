@@ -23,11 +23,12 @@ $(document).on('turbolinks:load', function() {
    $(".dropdown-button").dropdown();
    $('select').material_select();
    Waves.displayEffect();
+
    Materialize.updateTextFields();
    $('.datepicker').pickadate({
      selectMonths: true,
      selectYears: 3,
      min: true,
-     format: 'yyyy-mm-dd'
+     format: 'mm-dd-yyyy'
    });
 });

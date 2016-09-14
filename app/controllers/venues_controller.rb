@@ -5,6 +5,8 @@ class VenuesController < ApplicationController
 
   def index
     @venues = Venue.all
+    @venue = Venue.find_by_id(params[:id])
+    render :index
   end
 
   def new
