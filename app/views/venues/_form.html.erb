@@ -31,12 +31,10 @@
         </div>
       </form>
 
-    <div class="input-field">
-      <i class="material-icons prefix">perm_identity</i>
-      <label for="icon_prefix">Draft Venue Photo</label>
-      <%= f.uploadcare_field :file, :data => {:images_only => true, :image_shrink => "1000x1000", :clearable => true }%>
+    <div class="center-align">
+      <label for=":file"><h6>Upload your venue's picture:</h6></label>
+      <%= f.uploadcare_field :file, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "1000x1000", :clearable => true } %>
     </div>
-
 
 
     <div class="actions">
