@@ -1,0 +1,13 @@
+defaults: &defaults
+  public_key: "c1099a6be8a661ed69ff"
+  private_key: "7afc3ca1157b9c0f5aef"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+  autostore: false
+
+production:
+  <<: *defaults

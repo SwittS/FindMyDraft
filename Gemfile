@@ -39,6 +39,7 @@ gem 'jquery-ui-rails'
 
 gem 'masonry-rails'
 
+gem 'uploadcare-rails', "~> 1.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
