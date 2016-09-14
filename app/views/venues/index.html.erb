@@ -9,49 +9,42 @@
 
 <div class="container">
   <br>
-  <div class="col s12">
+  <div class="col s12 l12">
     Find the perfect fit: Explore draft venues.
   </div>
   <br>
   <hr>
   <br>
   <div class="searchFilter row">
-    <div class="col s4 center-align">
-      Wi-Fi
+    <div class="col s4 l12 center-align">
     </div>
-    <div class="col s4 center-align">
+    <div class="col s4 l12 center-align">
       League Size
     </div>
-    <div class="col s4 center-align">
+    <div class="col s4 l12 center-align">
       Find a venue
     </div>
   </div>
   <br>
   <br>
   <div class="venueView row">
-    <div class="col s3">
+    <div class="col s3 l12">
       Image Picture
     </div>
-    <div class="col s3">
-      <p>
-        Venue name
-      </p>
-      <p>
-        Venue address
-      </p>
+    <% @venues.each do |f| %>
+    <div class="col s3 l12">
+      <p><%= f.venue_name %></p>
+      <p><%= f.address %></p>
     </div>
-    <div class="col s3">
-      <p>
-        Wi-Fi
-      </p>
-      <p>
-        Accomodates
-      </p>
+    <div class="col s3 l12">
+      <p><%= f.wifi %></p>
+      <p><%= f.accomodate %></p>
     </div>
-    <div class="col s3">
+    <div class="col s3 l12">
         Book it!
     </div>
   </div>
   <br>
   <hr>
+  <% end %>
 </div>
