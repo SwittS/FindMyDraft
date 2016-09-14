@@ -15,8 +15,10 @@
 //= require jquery-ui/datepicker
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
-//= require turbolinks
 //= require masonry/jquery.masonry
+//= require gmaps/google
+//= require underscore
+//= require turbolinks
 //= require_tree .
 $(document).on('turbolinks:load', function() {
  console.log('(document).turbolinks:load');
@@ -32,4 +34,5 @@ $(document).on('turbolinks:load', function() {
    min: true,
    format: 'mm-dd-yyyy'
  });
+
 });

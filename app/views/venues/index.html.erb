@@ -25,13 +25,13 @@
   <br>
   <br>
 
-<div id="venueView" class="transitions-enabled">
+<div id="venueView" class="transitions-enabled clearfix">
 
   <% @venue.each do |f| %>
 
-    <div class="box">
+    <div id="box">
       <div class="panel-body">
-        <div class="col s12 m12 l4">
+        <div class="colCard s12 m12 l4">
           <div class="card small">
             <div class="card-image waves-effect waves-block waves-light">
               <img class="activator responsive-img" src="<%= f.file %>" >
