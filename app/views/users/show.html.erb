@@ -4,7 +4,7 @@
   <div class="row"></div>
   <div class="row">
     <div class="col s12 l3 center-align">
-      <img class="responsive" src="http://i.istockimg.com/file_thumbview_approve/64330137/3/stock-photo-64330137-a-icon-of-a-businessman-avatar-or-profile-pic.jpg" alt="" />
+      <img class="responsive-img circle" src="<%= @user.file %>" >
       <p>
         <h6 style="text-align:center;">Member since <%= @user.created_at.strftime("%B %Y") %></h6>
       </p>

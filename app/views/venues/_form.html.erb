@@ -33,8 +33,8 @@
 
     <div class="input-field">
       <i class="material-icons prefix">perm_identity</i>
-      <label for="icon_prefix">Draft Venue Photos</label>
-      <%= f.text_field :file %>
+      <label for="icon_prefix">Draft Venue Photo</label>
+      <%= f.uploadcare_field :file, :data => {:images_only => true, :image_shrink => "1000x1000", :clearable => true }%>
     </div>
 
 

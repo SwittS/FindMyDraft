@@ -29,10 +29,9 @@
     <%= f.text_field :phone_number %>
   </div>
 
-  <div class="input-field">
-    <i class="material-icons prefix">perm_identity</i>
-    <label for="icon_prefix">Profile Picture</label>
-    <%= f.text_field :file %>
+  <div class="center-align">
+    <label for=":file"><h6>Upload a profile picture:</h6></label>
+    <%= f.uploadcare_field :file, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true } %>
   </div>
 
   <div class="privacy">
