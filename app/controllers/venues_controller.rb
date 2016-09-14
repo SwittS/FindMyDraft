@@ -19,7 +19,7 @@ class VenuesController < ApplicationController
   def create
     @venue = current_user.venues.new(venue_params)
     if @venue.save
-      redirect_to venues_path, notice: "Venue Saved!"
+      redirect_to venues_path, notice: "Your venue succesfully saved!"
     else
       render :new
     end
@@ -27,7 +27,7 @@ class VenuesController < ApplicationController
 
   def update
     if @venue.update(venue_params)
-      redirect_to edit_venue_path(@venue), notice: "Venue Updated!"
+      redirect_to edit_venue_path(@venue), notice: "Your venue succesfully updated!"
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class VenuesController < ApplicationController
     if current_user.id == @venue.user.id
       @venues = @venue.venue_name
     else
-      redirect_to root_path, notice: "You don't have permission."
+      redirect_to root_path, notice: "You don't have permission to edit this profile."
     end
   end
 
