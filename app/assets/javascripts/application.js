@@ -16,19 +16,20 @@
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
 //= require turbolinks
+//= require masonry/jquery.masonry
 //= require_tree .
 $(document).on('turbolinks:load', function() {
-   console.log('(document).turbolinks:load');
-   $(".button-collapse").sideNav();
-   $(".dropdown-button").dropdown();
-   $('select').material_select();
-   Waves.displayEffect();
+ console.log('(document).turbolinks:load');
+ $(".button-collapse").sideNav();
+ $(".dropdown-button").dropdown();
+ $('select').material_select();
+ Waves.displayEffect();
 
-   Materialize.updateTextFields();
-   $('.datepicker').pickadate({
-     selectMonths: true,
-     selectYears: 3,
-     min: true,
-     format: 'mm-dd-yyyy'
-   });
+ Materialize.updateTextFields();
+ $('.datepicker').pickadate({
+   selectMonths: true,
+   selectYears: 3,
+   min: true,
+   format: 'mm-dd-yyyy'
+ });
 });
