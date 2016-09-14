@@ -15,6 +15,8 @@
 //= require jquery-ui/datepicker
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
+//= require underscore
+//= require gmaps/google
 //= require turbolinks
 //= require masonry/jquery.masonry
 //= require_tree .
