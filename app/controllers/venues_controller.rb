@@ -4,9 +4,8 @@ class VenuesController < ApplicationController
   before_action :authenticate_user!, except: [:show]
 
   def index
-    @venues = Venue.all
-    @venue = Venue.find_by_id(params[:id])
-    render :index
+    @q = Venue.ransack(params[:q])
+    @venue = @q.result(distinct: true)
   end
 
   def new
