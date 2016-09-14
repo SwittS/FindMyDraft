@@ -94,15 +94,25 @@ nav ul a {
   width: 85%;
 
 }
+
 #venueView {
   background: #FFF;
   padding: 5px;
   margin-bottom: 20px;
   border-radius: 5px;
+  clear: both;
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
 }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+.colCard { width: 270px; }
+.colCard img { max-width: 280px; }
+
 
 .picNav {
   padding-top: 5px;

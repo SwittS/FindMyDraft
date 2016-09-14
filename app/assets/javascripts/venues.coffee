@@ -4,6 +4,6 @@
 $ ->
   $('#venueView').imagesLoaded ->
     $('#venueView').masonry
-      itemSelector: '.box'
+      itemSelector: '#box'
       columnWidth: 30
-      gutterWidth: 10
+      gutterWidth: 30
