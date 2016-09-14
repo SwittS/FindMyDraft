@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :venues
   has_many :bookings
+
+  validates :fullname, length: {maximum: 128}, presence: true
 end

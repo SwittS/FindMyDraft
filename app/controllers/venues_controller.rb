@@ -37,7 +37,7 @@ class VenuesController < ApplicationController
     if current_user.id == @venue.user.id
       @venues = @venue.venue_name
     else
-      redirect_to root_path, notice: "You don't have permission to edit this profile."
+      redirect_to root_path, notice: "You don't have permission to edit this."
     end
   end
 
