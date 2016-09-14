@@ -12,6 +12,7 @@
         <li><%= link_to  current_user.fullname , user_path(current_user.id) %></li>
         <li><%= link_to "Edit Profile",  edit_user_registration_path %></li>
         <li><%= link_to "Host a Draft",  new_venue_path %></li>
+        <li><%= link_to "Venues", venues_path %></li>
         <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
         <% end %>
       </ul>
