@@ -25,6 +25,7 @@ $(document).on('turbolinks:load', function() {
  $(".button-collapse").sideNav();
  $(".dropdown-button").dropdown();
  $('select').material_select();
+ $('.slider').slider({full_width: true});
  Waves.displayEffect();
 
  Materialize.updateTextFields();
