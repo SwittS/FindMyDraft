@@ -36,8 +36,7 @@
 
 ### Ruby Gems Used:
 * Devise <ul><li>```gem 'devise'```</li></ul>
-* Masonry <ul><li>```gem 'masonry-rails'```</li><li>```/app/assets/javascript/application.js => //= require masonry/jquery.masonry```</li><li>```/app/assets/stylesheets/application.scss => *= require 'masonry/transitions'
-```</ul>
+* Masonry <ul><li>```gem 'masonry-rails'```</li><li>```/app/assets/javascript/application.js => //= require masonry/jquery.masonry```</li><li>```/app/assets/stylesheets/application.scss => *= require 'masonry/transitions' ```</li></ul>
 * Uploadcare <ul><li>```gem 'uploadcare-rails', "~> 1.0"```</li></ul>
 * Ransack <ul><li>```gem 'ransack'```</li></ul>
 * Geocoder <ul><li>```gem 'geocoder'```</li></ul>
