@@ -1,12 +1,12 @@
 <%- if controller_name != 'sessions' %>
   <div style="text-align: center">
-  Already have an account?<div class="divider"></div><%= link_to "Log in", new_session_path(resource_name), :class=>'waves-effect waves-blue waves-ripple btn blue-grey darken-2"' %><br />
+  Already have an account?<div class="divider"></div><%= link_to "Log in", new_session_path(resource_name), :class=>'waves-effect waves-orange waves-ripple btn white orange-text text-darken-3 "' %><br />
 </div>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
 <div style="text-align: center">
-  Don't have an account?<div class="divider"></div><%= link_to "Sign up", new_registration_path(resource_name), :class=>'waves-effect waves-blue waves-ripple btn blue-grey darken-2"' %><br />
+  Don't have an account?<div class="divider"></div><%= link_to "Sign up", new_registration_path(resource_name), :class=>'waves-effect waves-orange waves-ripple btn white orange-text text-darken-3"' %><br />
 </div>
 <% end -%>
 

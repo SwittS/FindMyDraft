@@ -20,36 +20,6 @@
    margin-top: 1px;
  }
 
-.grass{
-  .bg {
-     background: url('https://static.pexels.com/photos/54567/pexels-photo-54567.jpeg') no-repeat center center;
-     position: fixed;
-     width: 100%;
-     height: 350px; /*same height as jumbotron */
-     top:0;
-     left:0;
-     z-index: -1;
-   }
-   .jumbotron {
-     height: 270px;
-     color: white;
-     text-shadow: #444 0 1px 1px;
-     background:transparent;
-   }
-   h1 {
-     text-align: center;
-     padding-top: 3%;
-     color: black;
-     font-size: 6em;
-   }
-   p {
-     text-align: center;
-     padding-top: 2%;
-     color: black;
-     font-size: 1.5em;
-   }
-}
-
 .createAccount {
   padding-top: 5%;
 }
@@ -77,7 +47,7 @@
 }
 
 nav ul a {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .single-article .article-container-inner {
@@ -97,7 +67,8 @@ nav ul a {
 
 #venueView {
   background: #FFF;
-  padding: 5px;
+  padding-left: 55px;
+  padding-top: 5px;
   margin-bottom: 20px;
   border-radius: 5px;
   clear: both;
@@ -111,11 +82,15 @@ nav ul a {
 .clearfix { zoom: 1; }
 
 .colCard { width: 270px; }
-.colCard img { max-width: 280px; }
+.colCard img { max-width: 270px; }
 
 
 .picNav {
   padding-top: 5px;
+}
+
+.picNavMob {
+  padding-top: 20px;
 }
 
 #toasty {
@@ -131,3 +106,91 @@ nav ul a {
     color: #b94a48;
     text-align: left;
  }
+
+.uploadcare-widget-button-open {
+  @extend .orange, .darken-3;
+}
+
+.input-field input:focus + label {
+  color: orange !important;
+}
+/* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid orange !important;
+  box-shadow: 0 1px 0 0 orange !important
+}
+
+.userForms {
+  box-sizing: border-box;
+  width: 60%;
+  position: absolute;
+  margin: 100px auto 0;
+  background-color: white;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+  padding-bottom: 40px;
+  border-radius: 3px;
+}
+
+.userBody {
+  background-color: #497285;
+}
+
+#brand-logo {
+  margin-left: 5px;
+  border-style: solid;
+  border-color: #F78536;
+  padding: .5em;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+#map {
+  height: 400px;
+  width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.venueAttribute {
+  background-color: white;
+}
+
+.venueShowJumbo {
+  margin-top: -15px;
+  min-width: 100%;
+  height: 720px;
+}
+
+.room-section {
+    margin-top: -6px;
+    padding-top: 40px;
+}
+.panel {
+    border: 1px solid #dce0e0;
+    background-color: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.picker__date-display {
+  background-color:#497285;
+}
+.picker__weekday-display {
+  background-color:#F78536;
+}
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+  background-color:#F78536;
+}
+
+.picker {
+  color: #497285;
+}
+
+#footerLow {
+  margin-top: 8%;
+}
+
+.github {
+  margin-top: 1px;
+}

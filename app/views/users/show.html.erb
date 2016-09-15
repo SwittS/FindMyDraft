@@ -1,4 +1,5 @@
 <%= render 'global/navbar' %>
+<body class='userBody'>
 
 <div class="container">
   <div class="row"></div>
@@ -6,13 +7,15 @@
     <div class="col s12 l3 center-align">
       <img class="responsive-img circle" src="<%= @user.file %>" >
       <p>
-        <h6 style="text-align:center;">Member since <%= @user.created_at.strftime("%B %Y") %></h6>
+        <h6 class='white-text'>Member since <%= @user.created_at.strftime("%B %Y") %></h6>
       </p>
     </div>
     <div class="col s12 l9">
-      <h4 style="text-align:center;">Hey, I'm
-          <%= @user.fullname %>!
+      <h4 class="center white-text"><strong>Hey, I'm
+          <%= @user.fullname %>!</strong>
       </h4>
     </div>
   </div>
 </div>
+
+</body>
