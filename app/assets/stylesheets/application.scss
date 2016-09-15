@@ -172,3 +172,17 @@ nav ul a {
     -moz-border-radius: 0;
     border-radius: 0;
 }
+
+.picker__date-display {
+  background-color:#497285;
+}
+.picker__weekday-display {
+  background-color:#F78536;
+}
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+  background-color:#F78536;
+}
+
+.picker {
+  color: #497285;
+}
