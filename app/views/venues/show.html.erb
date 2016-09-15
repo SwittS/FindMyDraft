@@ -1,46 +1,29 @@
 <%= render 'global/navbar' %>
-<body class='userBody'>
-
-<div class="container">
-  <div class="userForms">
-
-  <br>
   <div class="row center-align">
-    <h3></h3>
-  </div>
-
-  <div class="row venueShowCard">
-  <div class="col s12 m7 l8 venueShowCard">
-    <div class="card large">
-      <div class="card-image">
-          <img class="responsive-img" src="<%= @venue.file %>" >
-        <h2><span class="card-title"><%= @venue.venue_name %></span></h2>
+    <img class="venueShowJumbo" src="<%= @venue.file %>" alt="" />
+    <div class="venueAttribute room-section panel col s12 m12 l12">
+      <div class="col s4 center-align">
+      <i class="medium material-icons prefix orange-text text-darken-3">label_outline</i>
+      <p><h5><%= @venue.venue_name %></h5></p>
+    </div>
+      <div class="col s4 center-align">
+        <i class="medium material-icons prefix orange-text text-darken-3">perm_scan_wifi</i>
+        <p><h5>WiFi: <%= t(@venue.wifi.class) %></h5></p>
       </div>
-      <br>
-      <br>
-      <div class="card-content">
-        <div class="row">
-          <div class="col s6 center-align">
-            <i class="medium material-icons prefix orange-text text-darken-3">perm_scan_wifi</i>
-            <p><%= t(@venue.wifi.class) %></p>
-          </div>
-          <div class="col s6 center-align">
-            <i class="medium material-icons prefix orange-text text-darken-3">supervisor_account</i>
-            <p><%= @venue.accomodate %></p>
-          </div>
-        </div>
+      <div class="col s4 center-align">
+        <i class="medium material-icons prefix orange-text text-darken-3">supervisor_account</i>
+        <p><h5><%= @venue.accomodate %> team leagues</h5></p>
     </div>
   </div>
 </div>
-</div>
-
-
-
+<br>
+<br>
+<body class='userBody'>
     <div class="row">
       <div class="col s6 center">
-        <h5><u>Address</u></h5>
-          <i class="small material-icons prefix orange-text text-darken-3">location_on</i>
-            <%= @venue.address %>
+        <h5 class="white-text"><u>Address</u></h5>
+          <h6><i class="small material-icons prefix orange-text text-darken-3">location_on</i>
+            <%= @venue.address %><h6>
             <br>
             <br>
             <script src="//maps.google.com/maps/api/js?v=3.25&key=AIzaSyC9Rer1Z5lhl-6yXyw0KZ8-rbt35YRwgow"></script>
@@ -61,7 +44,10 @@
             </script>
       </div>
       <div class="col s6 center">
-        <h5><u>Request to Book</u></h5>
+        <h5 class='white-text'><u>Request to Book</u></h5>
+        <br>
+        <br>
+        <br>
           <%= render 'bookings/form' %>
       </div>
     </div>
@@ -72,5 +58,4 @@
 
   </div>
 
-</div>
 </body>
