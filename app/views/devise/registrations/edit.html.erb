@@ -3,8 +3,11 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
+<body class='userBody'>
 
-  <div class="createAccount row">
+<div class="container">
+
+  <div class="userForms createAccount row">
 
     <div class="col s3 hide-on-small-only">
       <br>
@@ -40,11 +43,16 @@
     <div class="center-align">
       <label for=":file"><h6>Upload a profile picture:</h6></label>
       <%= f.uploadcare_field :file, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true } %>
+      <br>
+      <br>
     </div>
-    <br>
     <hr class="editHr">
     <br>
-    <div class="actions">
+    <div class="actions center">
       <%= f.submit "Save", :class=>'waves-effect waves-blue waves-ripple btn orange darken-3' %>
     </div>
 <% end %>
+</div>
+</div>
+</div>
+</body>

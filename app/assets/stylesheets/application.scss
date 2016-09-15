@@ -67,7 +67,8 @@ nav ul a {
 
 #venueView {
   background: #FFF;
-  padding: 5px;
+  padding-left: 55px;
+  padding-top: 5px;
   margin-bottom: 20px;
   border-radius: 5px;
   clear: both;
@@ -117,4 +118,28 @@ nav ul a {
 .row .input-field input:focus {
   border-bottom: 1px solid orange !important;
   box-shadow: 0 1px 0 0 orange !important
+}
+
+.userForms {
+  box-sizing: border-box;
+  width: 60%;
+  position: absolute;
+  margin: 100px auto 0;
+  background-color: white;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+  padding-bottom: 40px;
+  border-radius: 3px;
+}
+
+.userBody {
+  background-color: #497285;
+}
+
+#brand-logo {
+  margin-left: 5px;
+  border-style: solid;
+  border-color: #F78536;
+  padding: .5em;
+  font-size: 1em;
+  font-weight: 400;
 }
