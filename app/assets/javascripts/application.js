@@ -36,4 +36,19 @@ $(document).on('turbolinks:load', function() {
    format: 'mm-dd-yyyy'
  });
 
+ $("#venueView").imagesLoaded(function(){
+   $('#venueView').masonry({
+               itemSelector: '#box',
+               columnWidth: 30,
+               gutterWidth: 30,
+               isAnimated:true,
+               animationOptions: {
+                   duration: 700,
+                   easing:'linear',
+                   queue :false
+              }
+    });
+  });
+
+
 });

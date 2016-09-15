@@ -5,19 +5,19 @@
 <div class="createAccount row">
   <div class="col s12 m6 offset-m3">
     <div class="input-field">
-      <i class="material-icons prefix">email</i>
+      <i class="material-icons prefix blue-grey-text">email</i>
       <label for="icon_prefix">Email Address</label>
       <%= f.email_field :email, autofocus: true %>
     </div>
 
     <div class="input-field">
-      <i class="material-icons prefix">lock_open</i>
+      <i class="material-icons prefix blue-grey-text">lock_open</i>
       <label for="icon_prefix">Password</label>
       <%= f.password_field :password, autocomplete: "off" %>
     </div>
 
   <div class="actions">
-    <%= f.submit "Log in", :class=>'waves-effect waves-blue waves-ripple btn logInBtn blue-grey darken-2"' %>
+    <%= f.submit "Log in", :class=>'waves-effect waves-blue waves-ripple btn logInBtn orange darken-3"' %>
   </div>
   <% end %>
   </div>

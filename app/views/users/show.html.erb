@@ -6,11 +6,11 @@
     <div class="col s12 l3 center-align">
       <img class="responsive-img circle" src="<%= @user.file %>" >
       <p>
-        <h6 style="text-align:center;">Member since <%= @user.created_at.strftime("%B %Y") %></h6>
+        <h6 class='orange-text text-darken-3 center'>Member since <%= @user.created_at.strftime("%B %Y") %></h6>
       </p>
     </div>
     <div class="col s12 l9">
-      <h4 style="text-align:center;">Hey, I'm
+      <h4 class="center">Hey, I'm
           <%= @user.fullname %>!
       </h4>
     </div>

@@ -1,8 +1,60 @@
-<div class="grass">
-<div class="bg"></div>
-<div class="jumbotron">
-  <h1>Find My Draft</h1>
-  <p>Search. Pick. Draft.</p>
-</div>
-</div>
 <%= render 'global/navbar' %>
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text text-darken-3">Find My Draft</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Book or host a live fantasy football draft.</h5>
+      </div>
+      <div class="row center">
+        <% if(!user_signed_in?) %>
+        <%= link_to "Get Started", new_user_registration_path, :class => 'btn-large waves-effect waves-light orange darken-3'%>
+        <% else %>
+        <% end %>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text text-darken-3"><i class="medium material-icons">search</i></h2>
+            <h5 class="center">Search.</h5>
+
+            <p class="light center">Search our collection of draft venues.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text text-darken-3"><i class=" medium material-icons">today</i></h2>
+            <h5 class="center">Pick.</h5>
+
+            <p class="light center">Pick a convenient date.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center orange-text text-darken-3"><i class="medium material-icons">play_arrow</i></h2>
+            <h5 class="center">Draft.</h5>
+
+            <p class="light center">Make an unforgettable experience.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
