@@ -20,7 +20,7 @@
 <br>
 <body class='userBody'>
     <div class="row">
-      <div class="col s6 center">
+      <div class="col s12 m6 center">
         <h5 class="white-text"><u>Address</u></h5>
           <h6><i class="small material-icons prefix orange-text text-darken-3">location_on</i>
             <%= @venue.address %><h6>
@@ -43,11 +43,11 @@
             });
             </script>
       </div>
-      <div class="col s6 center">
+      <div class="col s12 m6 center">
         <h5 class='white-text'><u>Request to Book</u></h5>
-        <br>
-        <br>
-        <br>
+        <br class="hide-on-small-only">
+        <br class="hide-on-small-only">
+        <br class="hide-on-small-only">
           <%= render 'bookings/form' %>
       </div>
     </div>

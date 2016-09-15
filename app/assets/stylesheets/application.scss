@@ -129,7 +129,12 @@ nav ul a {
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
   padding-bottom: 40px;
   border-radius: 3px;
-}
+  }
+  @media only screen and (max-width : 992px) {
+    .userForms {
+      width: 95%;
+    }
+  }
 
 .userBody {
   background-color: #497285;
@@ -143,12 +148,25 @@ nav ul a {
   font-size: 1em;
   font-weight: 400;
 }
+  @media only screen and (max-width : 992px) {
+  #brand-logo {
+    margin-left: 60%;
+  }
+}
 
 #map {
   height: 400px;
   width: 550px;
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (max-width : 992px) {
+  #map {
+    height: 350px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .venueAttribute {
@@ -188,9 +206,5 @@ nav ul a {
 }
 
 #footerLow {
-  margin-top: 8%;
-}
-
-.github {
-  margin-top: 1px;
+  margin-top: 9%;
 }
