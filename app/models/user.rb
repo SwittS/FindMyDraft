@@ -6,14 +6,14 @@ class User < ApplicationRecord
 
   has_many :venues
   has_many :bookings
+  
   before_validation :default_profile_image
 
   validates :fullname, length: {maximum: 128}, presence: true
 
-private
+  private
 
   def default_profile_image
     self.file = "http://www.pil-group.com/uploads/contacts/normal/noimage1.png" if self.file == ""
   end
-
 end

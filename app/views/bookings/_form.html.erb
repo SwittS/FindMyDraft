@@ -1,18 +1,17 @@
 <%= form_for([@venue, @venue.bookings.new]) do |f| %>
 
 <div class="container">
-
-<div class="row center">
-<div class="input-field">
-  <i class="material-icons prefix orange-text text-darken-3">today</i>
-  <label for="icon_prefix">Pick a draft date</label>
-  <%= f.date_field(:draft_date, class: 'datepicker')%>
-</div>
-<%= f.hidden_field :venue_id, value: @venue.id %>
-<%= f.hidden_field :user_id, value: current_user.id %>
-<div class="actions center-align">
-  <%= f.submit "Book Now", :class=>'waves-effect waves-orange waves-ripple btn orange darken-3' %>
-</div>
-<% end %>
-</div>
+  <div class="row center">
+    <div class="input-field">
+      <i class="material-icons prefix orange-text text-darken-3">today</i>
+      <label for="icon_prefix">Pick a draft date</label>
+      <%= f.date_field(:draft_date, class: 'datepicker')%>
+    </div>
+    <%= f.hidden_field :venue_id, value: @venue.id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <div class="actions center-align">
+    <%= f.submit "Book Now", :class=>'waves-effect waves-orange waves-ripple btn orange darken-3' %>
+    </div>
+    <% end %>
+  </div>
 </div>

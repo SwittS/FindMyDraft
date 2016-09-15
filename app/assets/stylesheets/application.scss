@@ -14,11 +14,12 @@
  *= require_tree .
  *= require_self
  */
- @import "materialize";
 
- .nav-wrapper {
-   margin-top: 1px;
- }
+@import 'materialize';
+
+.nav-wrapper {
+ margin-top: 1px;
+}
 
 .createAccount {
   padding-top: 5%;
@@ -36,7 +37,7 @@
 }
 
 .divider{
-  width:30px;
+  width: 30px;
   height:auto;
   display:inline-block;
 }
@@ -54,6 +55,7 @@ nav ul a {
   padding: auto;
   margin: auto;
 }
+
 .single-article hr {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -62,7 +64,6 @@ nav ul a {
 
 .editHr {
   width: 85%;
-
 }
 
 #venueView {
@@ -78,12 +79,14 @@ nav ul a {
 }
 
 .clearfix:before, .clearfix:after { content: ""; display: table; }
+
 .clearfix:after { clear: both; }
+
 .clearfix { zoom: 1; }
 
 .colCard { width: 270px; }
-.colCard img { max-width: 270px; }
 
+.colCard img { max-width: 270px; }
 
 .picNav {
   padding-top: 5px;
@@ -101,11 +104,11 @@ nav ul a {
 }
 
 .alert-error {
-    background-color: #f2dede;
-    border-color: #eed3d7;
-    color: #b94a48;
-    text-align: left;
- }
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
 
 .uploadcare-widget-button-open {
   @extend .orange, .darken-3;
@@ -114,7 +117,7 @@ nav ul a {
 .input-field input:focus + label {
   color: orange !important;
 }
-/* label underline focus color */
+
 .row .input-field input:focus {
   border-bottom: 1px solid orange !important;
   box-shadow: 0 1px 0 0 orange !important
@@ -148,7 +151,8 @@ nav ul a {
   font-size: 1em;
   font-weight: 400;
 }
-  @media only screen and (max-width : 992px) {
+
+@media only screen and (max-width : 992px) {
   #brand-logo {
     margin-left: 60%;
   }
@@ -160,6 +164,7 @@ nav ul a {
   margin-left: auto;
   margin-right: auto;
 }
+
 @media only screen and (max-width : 992px) {
   #map {
     height: 350px;
@@ -180,23 +185,26 @@ nav ul a {
 }
 
 .room-section {
-    margin-top: -6px;
-    padding-top: 40px;
+  margin-top: -6px;
+  padding-top: 40px;
 }
+
 .panel {
-    border: 1px solid #dce0e0;
-    background-color: #fff;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
+  border: 1px solid #dce0e0;
+  background-color: #fff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 .picker__date-display {
   background-color:#497285;
 }
+
 .picker__weekday-display {
   background-color:#F78536;
 }
+
 .picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
   background-color:#F78536;
 }

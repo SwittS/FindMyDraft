@@ -20,6 +20,7 @@
 //= require underscore
 //= require turbolinks
 //= require_tree .
+
 $(document).on('turbolinks:load', function() {
  console.log('(document).turbolinks:load');
  $(".button-collapse").sideNav();
@@ -38,17 +39,15 @@ $(document).on('turbolinks:load', function() {
 
  $("#venueView").imagesLoaded(function(){
    $('#venueView').masonry({
-               itemSelector: '#box',
-               columnWidth: 30,
-               gutterWidth: 30,
-               isAnimated:true,
-               animationOptions: {
-                   duration: 700,
-                   easing:'linear',
-                   queue :false
-              }
-    });
-  });
-
-
+     itemSelector: '#box',
+     columnWidth: 30,
+     gutterWidth: 30,
+     isAnimated:true,
+     animationOptions: {
+         duration: 700,
+         easing:'linear',
+         queue :false
+    }
+   });
+ });
 });
