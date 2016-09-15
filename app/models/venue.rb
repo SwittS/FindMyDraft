@@ -5,15 +5,14 @@ class Venue < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
 
+  before_validation :default_venue_image
+
   validates :address, :wifi, :accomodate, presence: true
   validates :venue_name, length: {maximum: 64}
-
-  before_validation :default_venue_image
 
   private
 
     def default_venue_image
       self.file = "http://ingridwu.dmmdmcfatter.com/wp-content/uploads/2015/01/placeholder.png" if self.file == ""
     end
-
 end

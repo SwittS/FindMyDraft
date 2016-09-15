@@ -3,39 +3,32 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
 <body class='userBody'>
-
-<div class="container">
-
-<div class="userForms createAccount row">
-  <div class="col s12 m6 offset-m3">
-
-    <div class="input-field">
-      <i class="material-icons prefix blue-grey-text">email</i>
-      <label for="icon_prefix">Email Address</label>
-      <%= f.email_field :email, autofocus: true %>
-    </div>
-
-    <div class="input-field">
-      <i class="material-icons prefix blue-grey-text">lock_open</i>
-      <label for="icon_prefix">Password</label>
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-  <div class="actions">
-    <%= f.submit "Log in", :class=>'waves-effect waves-blue waves-ripple btn logInBtn orange darken-3"' %>
-    <br>
-    <br>
-  </div>
-  <% end %>
-  </div>
-
-<div class="article-container single-article">
-    <div class="article-container-inner">
+  <div class="container">
+    <div class="userForms createAccount row">
+      <div class="col s12 m6 offset-m3">
+        <div class="input-field">
+          <i class="material-icons prefix blue-grey-text">email</i>
+          <label for="icon_prefix">Email Address</label>
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix blue-grey-text">lock_open</i>
+          <label for="icon_prefix">Password</label>
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Log in", :class=>'waves-effect waves-blue waves-ripple btn logInBtn orange darken-3"' %>
+          <br>
+          <br>
+        </div>
+          <% end %>
+      </div>
+      <div class="article-container single-article">
+        <div class="article-container-inner">
         <hr>
+        </div>
+      </div>
+      <%= render "devise/shared/links" %>
     </div>
-</div>
-<%= render "devise/shared/links" %>
-</div>
-</div>
-
+  </div>
 </body>
