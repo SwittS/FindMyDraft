@@ -13,6 +13,6 @@ class Venue < ApplicationRecord
   private
 
     def default_venue_image
-      self.file = "http://ingridwu.dmmdmcfatter.com/wp-content/uploads/2015/01/placeholder.png" if self.file == ""
+      self.file |= "http://ingridwu.dmmdmcfatter.com/wp-content/uploads/2015/01/placeholder.png"
     end
 end

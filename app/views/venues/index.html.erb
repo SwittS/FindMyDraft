@@ -1,66 +1,72 @@
 <%= render 'global/navbar' %>
 
 <body class="userBody">
-  <div class="container">
-  <br>
-    <div class="col s12 l12">
-      <h4 class="white-text">Find the perfect fit: Explore draft venues.</h4>
-    </div>
-  <br>
-  <hr>
-  <br>
-      <nav>
-        <div class="nav-wrapper orange darken-3">
-        <%= search_form_for @q do |g| %>
-          <form>
-            <div class="input-field">
-              <%= g.search_field :venue_name_or_address_cont, :placeholder=>"Search by address or venue name",
-              :id=>'search', :class=>'center-align' %>
-              <label for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
-            </div>
-          <% end %>
-          </form>
+    <div class="container">
+        <br>
+        <div class="col s12 l12">
+            <h4 class="white-text">Find the perfect fit: Explore draft venues.</h4>
         </div>
-      </nav>
-      <br>
-      <br>
-      <div id="venueView" class="transitions-enabled clearfix">
-        <% @venue.each do |f| %>
-          <div id="box">
-            <div class="panel-body">
-              <div class="colCard s12 m12 l4">
-                <div class="card small">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator responsive-img" src="<%= f.file %>" >
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator"><%= f.venue_name %><i class="material-icons right">more_vert</i></span>
-                    <p class="orange-text text-darken-3"><%= f.address %></p>
-                  </div>
-                  <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">About This Venue<i class="material-icons right">close</i></span>
-                    <div class="row">
-                      <i class="medium material-icons">perm_scan_wifi</i>Free WiFi:
-                      <strong class='orange-text text-darken-3'><%= t(f.wifi.class) %></strong>
+        <br>
+        <hr>
+        <br>
+        <nav>
+            <div class="nav-wrapper orange darken-3">
+                <%= search_form_for @q do |g| %>
+                <form>
+                    <div class="input-field">
+                        <%= g.search_field :venue_name_or_address_cont, :placeholder=>"Search by address or venue name",
+              :id=>'search', :class=>'center-align' %>
+                        <label for="search">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <i class="material-icons">close</i>
                     </div>
-                    <div class="">
-                      <i class="medium material-icons">supervisor_account</i>Accomodates a
-                      <strong class='orange-text text-darken-3' %><%= f.accomodate %></strong> Team League
-                    </div>
-                    <hr>
-                    <div class="center-align">
-                      <%= link_to "Request to Book", venue_path(f), :class => "waves-effect waves-light btn orange darken-3 center",
-                      :method => :get %>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                </form>
+                <% end %>
             </div>
-          </div>
-        <% end %>
-      </div>
-      <br>
-      <hr>
-  </div>
+        </nav>
+        <br>
+        <br>
+        <div id="venueView" class="transitions-enabled clearfix">
+            <% @venue.each do |f| %>
+            <div id="box">
+                <div class="panel-body">
+                    <div class="colCard s12 m12 l4">
+                        <div class="card small">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator responsive-img" src="<%= f.file %>">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator"><%= f.venue_name %>
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                                <p class="orange-text text-darken-3"><%= f.address %></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">About This Venue<i class="material-icons right">close</i>
+                                </span>
+                                <div class="row">
+                                    <i class="medium material-icons">perm_scan_wifi</i>Free WiFi:
+                                    <strong class='orange-text text-darken-3'><%= t(f.wifi.class) %></strong>
+                                </div>
+                                <div class="">
+                                    <i class="medium material-icons">supervisor_account</i>Accomodates a
+                                    <strong class='orange-text text-darken-3' %><%= f.accomodate %></strong>
+                                    Team League
+                                </div>
+                                <hr>
+                                <div class="center-align">
+                                    <%= link_to "Request to Book", venue_path(f), :class => "waves-effect waves-light btn orange darken-3 center",
+                      :method => :get %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <br>
+        <hr>
+    </div>
 </body>

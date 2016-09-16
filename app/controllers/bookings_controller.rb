@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
 
+  # TODO: Remove unused controller
   def calendar
     venue = Venue.find(params[:venue_id])
     today = Date.today
