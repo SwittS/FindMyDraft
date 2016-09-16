@@ -10,7 +10,7 @@ Rails.application.routes.draw do
              }
 
   resources :users, only: :show
-
+  
   resources :venues do
     resources :bookings, only: [:create]
   end

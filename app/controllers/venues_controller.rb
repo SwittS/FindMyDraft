@@ -24,15 +24,8 @@ class VenuesController < ApplicationController
     if @venue.save
       redirect_to venues_path, notice: "Your venue succesfully saved!"
     else
+      #TODO: consider adding an error message or check w/ devise
       render :new
-    end
-  end
-
-  def update
-    if @venue.update(venue_params)
-      redirect_to edit_venue_path(@venue), notice: "Your venue succesfully updated!"
-    else
-      render :edit
     end
   end
 
@@ -43,6 +36,16 @@ class VenuesController < ApplicationController
       redirect_to root_path, notice: "You don't have permission to edit this."
     end
   end
+
+  def update
+    if @venue.update(venue_params)
+      redirect_to edit_venue_path(@venue), notice: "Your venue succesfully updated!"
+    else
+      #TODO: consider adding error message here
+      render :edit
+    end
+  end
+
 
   private
 

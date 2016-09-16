@@ -3,6 +3,7 @@
 <body class='userBody'>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
+    <!-- TODO: consider adding some styling solution instead of brs -->
     <br><br>
     <h1 class="header center white-text">Find My Draft</h1>
       <div class="row center">
@@ -10,10 +11,10 @@
       </div>
       <div class="row center">
         <% if(!user_signed_in?) %>
-        <%= link_to "Get Started", new_user_registration_path, :class => 'btn-large waves-effect waves-light orange darken-3'%>
-        <% else %>
+          <%= link_to "Get Started", new_user_registration_path, :class => 'btn-large waves-effect waves-light orange darken-3'%>
         <% end %>
       </div>
+      <!-- TODO: consider adding some styling solution instead of brs -->
     <br><br>
     </div>
   </div>
